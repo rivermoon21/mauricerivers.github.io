@@ -15,24 +15,24 @@ class Carousel extends React.Component {
       items: [
         {
           id:0,
-          title: 'Dev Grub',
-          subTitle: 'Cookbook for Developers',
+          title: 'Personal',
+          subTitle: 'Haradware project',
           imgSrc: avatar,
-          link: 'https://devgrub.com',
+          link: 'https://stackoverflow.com/',
           selected: false
         },
         {
           id:1,
-          title: 'rivermoon',
-          subTitle: 'Youtube Channel',
+          title: 'Space',
+          subTitle: 'CubeSats and more',
           imgSrc: satellite,
           link: 'https://youtube.com',
           selected: false
         },
         {
           id:2,
-          title: 'Deverest',
-          subTitle: 'Social Media for Developers',
+          title: 'Blockchain',
+          subTitle: 'Smart Contracts',
           imgSrc: blockchain,
           link: 'https://github.com',
           selected: false

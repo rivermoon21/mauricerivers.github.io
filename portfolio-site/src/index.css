@@ -12,6 +12,14 @@ code {
     monospace;
 }
 
+form {
+  text-align: left;
+}
+
+p {
+  text-align: left;
+}
+
 .rm-card {
   margin:20px;
 }
@@ -46,4 +54,11 @@ code {
 .err-msg {
   color: #EE6352;
   padding: 10px 15px;
+}
+
+.rm-title-div {
+  text-align: center;
+}
+.rm-content-div {
+  text-align: left;
 }

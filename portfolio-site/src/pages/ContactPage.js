@@ -43,7 +43,7 @@ class ContactPage extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="rm-title-div">
         <Hero title={this.props.title} subTitle={this.props.subTitle} />
 
         <Content>
