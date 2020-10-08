@@ -29,9 +29,11 @@ class App extends React.Component {
       },
       about: {
         title: "About Me",
+        subTitle: "💻⚽🇲🇽📈",
       },
       contact: {
-        title: "Let's Talk ☎️",
+        title: "Let's Talk",
+        subTitle: "☎️",
       }
 
     }
@@ -57,8 +59,8 @@ class App extends React.Component {
           </Navbar>
 
           <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} /> } />
-          <Route path="/about" exact render={() => <AboutPage title={this.state.about.title}  /> } />
-          <Route path="/contact" exact render={() => <ContactPage title={this.state.contact.title} /> } />
+          <Route path="/about" exact render={() => <AboutPage title={this.state.about.title} subTitle={this.state.about.subTitle}  /> } />
+          <Route path="/contact" exact render={() => <ContactPage title={this.state.contact.title} subTitle={this.state.contact.subTitle} /> } />
 
           <Footer />
 
