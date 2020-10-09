@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 
 import Hero from '../components/Hero'
 import Content from '../components/Content'
+import Axios from 'axios';
 
 class ContactPage extends React.Component {
 
@@ -12,6 +13,7 @@ class ContactPage extends React.Component {
     this.state = {
       name: '',
       email: '',
+      subject: '',
       messsage: '',
       disabled: '',
       emailSent: ''
@@ -36,8 +38,30 @@ class ContactPage extends React.Component {
     this.setState({
       disabled: true,
       emailSent: false
-
     });
+
+    Axios.post('http://localhost:3030/api/email', this.state)
+      .then( res => {
+        if(res.data.success){
+
+          this.setState({
+            disabled: false,
+            emailSent: true
+          });
+        }
+        else {
+          this.setState({
+            disabled: false,
+            emailSent: false
+          });
+        }
+      })
+      .catch(err => {
+        this.setState({
+          disabled: false,
+          emailSent: false
+        });
+      });
 
   }
 
@@ -56,6 +80,11 @@ class ContactPage extends React.Component {
             <Form.Group>
               <Form.Label htmlFor="email">email</Form.Label>
               <Form.Control id="email" name="email" type="email" value={this.state.email} onChange={this.handleChange} />
+            </Form.Group>
+
+            <Form.Group>
+              <Form.Label htmlFor="subject">subject</Form.Label>
+              <Form.Control id="subject" name="subject" type="subject" value={this.state.subject} onChange={this.handleChange} />
             </Form.Group>
 
             <Form.Group>
