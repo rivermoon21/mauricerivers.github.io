@@ -16,7 +16,7 @@ class Carousel extends React.Component {
         {
           id:0,
           title: 'Personal',
-          subTitle: 'Haradware project',
+          subTitle: 'Hardware Projects',
           imgSrc: avatar,
           link: 'https://stackoverflow.com/',
           selected: false

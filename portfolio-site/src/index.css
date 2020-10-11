@@ -14,10 +14,18 @@ code {
 
 form {
   text-align: left;
+  font-family: Andale Mono, monospace;
 }
 
 p {
   text-align: left;
+  font-family: Andale Mono, monospace;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  /* The rest of the styles */
 }
 
 .rm-card {
@@ -25,10 +33,14 @@ p {
 }
 
 .rm-card-image {
-  border-radius: 10px;
+  border-radius: 30px;
   width: 300px;
   height: 300px;
   box-shadow: 0px 0px 3px 1px #ccc;
+}
+
+.rivermoon-brand {
+  font-family: 'Kaushan Script', cursive;
 }
 
 .rm-card-info {
@@ -44,6 +56,7 @@ p {
 .rm-card-subtitle {
   font-size: 16px;
   margin: 0px;
+
 }
 
 .success-msg {
@@ -62,6 +75,8 @@ p {
 
 .rm-title-div {
   text-align: center;
+  font-family: 'Kaushan Script', cursive;
+  color: "#F16868";
 }
 .rm-content-div {
   text-align: left;

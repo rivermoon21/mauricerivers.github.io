@@ -4,7 +4,7 @@ import Content from '../components/Content';
 
 function AboutPage(props) {
   return (
-    <div className="rm-title-div">
+    <div className="rm-title-div" >
       <Hero title={props.title} subTitle={props.subTitle} />
       <Content>
         <p>I am a software engineer that enjoys working with hardware, APIs and web development. I have experience with C, C++, Python and NodeJS.</p>
