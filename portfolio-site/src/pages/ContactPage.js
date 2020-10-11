@@ -1,10 +1,10 @@
 import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
+import emailjs from 'emailjs-com';
 
-import Hero from '../components/Hero'
-import Content from '../components/Content'
-import Axios from 'axios';
+import Hero from '../components/Hero';
+import Content from '../components/Content';
 
 class ContactPage extends React.Component {
 
@@ -16,7 +16,8 @@ class ContactPage extends React.Component {
       subject: '',
       messsage: '',
       disabled: '',
-      emailSent: ''
+      emailSent: '',
+      emailSending: ''
     }
   }
 
@@ -32,37 +33,42 @@ class ContactPage extends React.Component {
 
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault();
+  handleSubmit = (e) => {
+
+    e.preventDefault();
 
     this.setState({
       disabled: true,
-      emailSent: false
+      emailSent: false,
+      emailSending: true
     });
 
-    Axios.post('http://localhost:3030/api/email', this.state)
-      .then( res => {
-        if(res.data.success){
-
+    emailjs.sendForm('service_oj2aurp', 'template_5meesxz', e.target, 'user_tpRRilzZrxELEY2akDNty')
+      .then((result) => {
+          console.log(result.text);
+            if(result.text === 'OK'){
+              this.setState({
+                disabled: false,
+                emailSent: true,
+                emailSending: false
+              });
+            }
+            else {
+              this.setState({
+                disabled: false,
+                emailSent: false,
+                emailSending: false
+              });
+            }
+      }, (error) => {
+          console.log(error.text);
           this.setState({
             disabled: false,
-            emailSent: true
+            emailSent: false,
+            emailSending: false
           });
-        }
-        else {
-          this.setState({
-            disabled: false,
-            emailSent: false
-          });
-        }
-      })
-      .catch(err => {
-        this.setState({
-          disabled: false,
-          emailSent: false
-        });
+        e.target.reset();
       });
-
   }
 
   render() {
@@ -96,8 +102,9 @@ class ContactPage extends React.Component {
               Send
             </Button>
 
-            {this.state.emailSent === true && <p className="d-inline success-msg">Email Sent</p>}
-            {this.state.emailSent === false && <p className="d-inline err-msg">Email Not Sent</p>}
+            {this.state.emailSending === true && this.state.emailSent === false && <p className="d-inline sending-msg">Sending...</p>}
+            {this.state.emailSending === false && this.state.emailSent === true && <p className="d-inline success-msg">Email Sent</p>}
+            {this.state.emailSending === false && this.state.emailSent === false && <p className="d-inline err-msg">Email Not Sent</p>}
 
           </Form>
         </Content>

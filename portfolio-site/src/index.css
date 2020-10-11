@@ -55,6 +55,10 @@ p {
   color: #EE6352;
   padding: 10px 15px;
 }
+.sending-msg {
+  color: #FF9900;
+  padding: 10px 15px;
+}
 
 .rm-title-div {
   text-align: center;
