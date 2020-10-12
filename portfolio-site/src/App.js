@@ -40,11 +40,11 @@ class App extends React.Component {
     return (
       <Router >
         <Container className="p-0" fluid={true} style={{ backgroundColor: "#111" }} >
-          <Navbar className="border-bottom" expand="lg" >
+          <Navbar className="border-bottom" expand="lg" variant="dark" >
 
             <Navbar.Brand style={{ fontFamily: "Kaushan Script, cursive", fontSize: 30, color: "#c1b" }}>rivermoon</Navbar.Brand>
             <Navbar.Toggle className="ml-auto" aria-controls="navbar-toggle" />
-            <Navbar.Collapse id="navbar-toggle" style={{ textAlign: "center"}}>
+            <Navbar.Collapse id="navbar-toggle" style={{ textAlign: "center", color: "#c1b"}}>
 
               <Nav className="ml-auto" style={{ fontFamily: "Kaushan Script, cursive", fontSize: 25, color: "#72f" }} >
                 <Link className="nav-link" to="/" style={{ color: "#c1b" }} >Home</Link>
