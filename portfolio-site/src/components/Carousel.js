@@ -23,8 +23,8 @@ class Carousel extends React.Component {
         },
         {
           id:1,
-          title: 'Space',
-          subTitle: 'CubeSats and more',
+          title: 'Spacecraft',
+          subTitle: 'CubeSats',
           imgSrc: satellite,
           link: 'https://youtube.com',
           selected: false
@@ -67,7 +67,7 @@ class Carousel extends React.Component {
   render() {
     return(
       <Container fluid={true}>
-        <Row className="justify-content-around">
+        <Row className="justify-content-center">
           {this.makeItems(this.state.items)}
         </Row>
 

@@ -27,7 +27,11 @@ footer {
   left: 0;
   /* The rest of the styles */
 }
-
+.nav-link:hover {
+  color: #111;
+  border: #72f solid 1px;
+  background:#111;
+}
 .rm-card {
   margin:20px;
 }
@@ -36,7 +40,7 @@ footer {
   border-radius: 30px;
   width: 300px;
   height: 300px;
-  box-shadow: 0px 0px 3px 1px #ccc;
+  box-shadow: 0px 0px 10px 1px #c1b;
 }
 
 .rivermoon-brand {
@@ -76,7 +80,7 @@ footer {
 .rm-title-div {
   text-align: center;
   font-family: 'Kaushan Script', cursive;
-  color: "#F16868";
+  color: #c1b;
 }
 .rm-content-div {
   text-align: left;
