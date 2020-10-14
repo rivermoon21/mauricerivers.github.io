@@ -3,6 +3,7 @@ import Card from '../components/Card';
 import avatar from '../assets/images/avatar.png';
 import satellite from '../assets/images/satellite.png';
 import blockchain from '../assets/images/blockchain.png';
+import chip from '../assets/images/chip.png';
 
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -16,7 +17,7 @@ class Carousel extends React.Component {
         {
           id:0,
           title: 'Personal',
-          subTitle: 'Hardware Projects',
+          subTitle: 'GitHub',
           imgSrc: avatar,
           link: 'https://stackoverflow.com/',
           selected: false
@@ -35,6 +36,14 @@ class Carousel extends React.Component {
           subTitle: 'Smart Contracts',
           imgSrc: blockchain,
           link: 'https://github.com',
+          selected: false
+        },
+        {
+          id:3,
+          title: 'Hardware',
+          subTitle: 'Embedded Projects',
+          imgSrc: chip,
+          link: 'https://www.adafruit.com/',
           selected: false
         }
       ]

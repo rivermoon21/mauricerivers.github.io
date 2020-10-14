@@ -74,7 +74,7 @@ class ContactPage extends React.Component {
   render() {
     return (
       <div className="rm-title-div">
-        <Hero title={this.props.title} subTitle={this.props.subTitle} />
+        <Hero title={this.props.title} />
 
         <Content>
           <Form onSubmit={this.handleSubmit} >
@@ -95,7 +95,7 @@ class ContactPage extends React.Component {
 
             <Form.Group>
               <Form.Label htmlFor="message">message</Form.Label>
-              <Form.Control id="message" name="message" as="textarea" rows="5" value={this.state.message} onChange={this.handleChange} />
+              <Form.Control id="message" name="message" as="textarea" rows="3" value={this.state.message} onChange={this.handleChange} />
             </Form.Group>
 
             <Button className="d-inline-block" variant="primary" type="submit" disabled={this.state.disabled} >

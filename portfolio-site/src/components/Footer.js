@@ -9,15 +9,14 @@ function Footer() {
     return (
       <footer className="mt-5">
         <Container fluid={true} >
-          <Row className="border-top justify-content-between p-3" >
-            <Col className="p-0" md={3} sm={12} style={{ fontFamily: "Kaushan Script, cursive", fontSize: 30, color: "#c1b" }}>
-              rivermoon
-            </Col>
-            <Col className="p-0 d-flex justify-content-end" md={3} style={{ fontFamily: "Andale Mono, monospace", fontSize: 15, color: "#c1b" }}>
-              © 2020 Developed by Mauricio. All Rights Reserved.
-            </Col>
-
+        <Col className="border-top justify-content-between p-3" >
+          <Row className="p-0 justify-content-center" md={3} sm={12} style={{ fontFamily: "Kaushan Script, cursive", fontSize: 35, color: "#c1b" }} >
+            rivermoon
           </Row>
+            <Row className="p-3 justify-content-center" md={3} style={{ fontFamily: "Andale Mono, monospace", fontSize: 15, color: "#c1b" }}>
+              © 2020 Developed by Mauricio. All Rights Reserved.
+            </Row>
+        </Col>
         </Container>
       </footer>
     );
