@@ -56,15 +56,15 @@ class App extends React.Component {
                 <Link className="nav-link" to="/about"style={{ color: "#c1b", borderRadius:"15px" }} >About</Link>
                 <Link className="nav-link" to="/contact" style={{ color: "#c1b", borderRadius:"15px" }} >Contact</Link>
                 <Link className="nav-link" to="/socials" style={{ color: "#c1b", borderRadius:"15px" }} >Socials</Link>
-
               </Nav>
+
             </Navbar.Collapse>
           </Navbar>
 
           <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} /> } />
           <Route path="/about" exact render={() => <AboutPage title={this.state.about.title} subTitle={this.state.about.subTitle}  /> } />
           <Route path="/contact" exact render={() => <ContactPage title={this.state.contact.title} subTitle={this.state.contact.subTitle} /> } />
-          <Route path="/socials" exact render={() => <SocialsPage title={this.state.socials.title} subTitle={this.state.socials.subTitle} /> } />
+          <Route path="/socials" exact render={() => <SocialsPage title={this.state.socials.title} /> } />
 
           <Footer  />
 

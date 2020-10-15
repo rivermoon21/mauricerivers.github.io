@@ -2,8 +2,15 @@ import React from 'react';
 import Hero from '../components/Hero';
 import Content from '../components/Content';
 
+const BOTTOM_STYLE = {
+  height: 200,
+  zIndex: 2,
+  padding: '10px'
+}
+
 function AboutPage(props) {
   return (
+    <>
     <div className="rm-title-div"  >
       <Hero title={props.title} subTitle={props.subTitle} />
       <Content>
@@ -14,6 +21,10 @@ function AboutPage(props) {
       </Content>
     </div>
 
+    <div style={BOTTOM_STYLE}>
+    </div>
+
+    </>
   );
 }
 
