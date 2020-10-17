@@ -24,8 +24,9 @@ class App extends React.Component {
         {title:'Contact', path:'/contact'}
       ],
       home: {
-        title: "Relentless",
-        subTitle: "Check out my projects!"
+        title: "Hello, I\'m Mauricio",
+        subTitle: "Welcome to my page",
+        text: "Check out my projects below"
       },
       about: {
         title: "About Me",
@@ -47,7 +48,7 @@ class App extends React.Component {
         <Container className="p-2" fluid={true} style={{ backgroundColor: "#111" }} >
           <Navbar className="border-bottom" expand="lg" variant="dark" >
 
-            <Navbar.Brand style={{ fontFamily: "Kaushan Script, cursive", fontSize: 35, color: "#c1b" }}>mauricio.</Navbar.Brand>
+            <Navbar.Brand style={{ fontFamily: "Kaushan Script, cursive", fontSize: 35, color: "#c1b" }}>Relentless.</Navbar.Brand>
             <Navbar.Toggle className="ml-auto" aria-controls="navbar-toggle" />
             <Navbar.Collapse id="navbar-toggle" style={{ textAlign: "center", color: "#c1b"}}>
 
