@@ -13,9 +13,9 @@ const MODAL_STYLES = {
 }
 
 const BOTTOM_STYLE = {
-  height: 400,
-  zIndex: 2,
-  padding: '10px'
+  height: 20,
+  minHeight: "75vh",
+  zIndex: 2
 }
 
 function SocialsPage(props) {

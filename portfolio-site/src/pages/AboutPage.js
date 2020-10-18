@@ -3,9 +3,9 @@ import Hero from '../components/Hero';
 import Content from '../components/Content';
 
 const BOTTOM_STYLE = {
-  height: 200,
-  zIndex: 2,
-  padding: '10px'
+  height: 25,
+  minHeight: "75vh",
+  zIndex: 2
 }
 
 function AboutPage(props) {

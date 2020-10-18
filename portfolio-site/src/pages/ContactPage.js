@@ -6,6 +6,12 @@ import emailjs from 'emailjs-com';
 import Hero from '../components/Hero';
 import Content from '../components/Content';
 
+const BOTTOM_STYLE = {
+  height: 20,
+  minHeight: "75vh",
+  zIndex: 2
+}
+
 class ContactPage extends React.Component {
 
   constructor(props){
@@ -108,6 +114,9 @@ class ContactPage extends React.Component {
 
           </Form>
         </Content>
+
+        <div style={BOTTOM_STYLE}>
+        </div>
 
       </div>
     );
