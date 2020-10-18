@@ -38,9 +38,9 @@ function SocialsPage(props) {
       Click Me!
     </button>
       <Modal open={isOpen} onClose={ () => setIsOpen(false) } >
-        <SocialIcon url="https://github.com/rivermoon21" bgColor="#e600e6" style={{ height: 100, width: 100 }} />
-        <SocialIcon url="https://www.linkedin.com/in/mrivera93/" bgColor="#e600e6" style={{ height: 100, width: 100 }} />
-        <SocialIcon url="https://twitter.com/rivermoon21" bgColor="#e600e6" style={{ height: 100, width: 100 }} />
+        <SocialIcon url="https://github.com/rivermoon21" target="_blank" rel="noopener noreferrer" bgColor="#e600e6" style={{ height: 100, width: 100 }} />
+        <SocialIcon url="https://www.linkedin.com/in/mrivera93/" target="_blank" rel="noopener noreferrer" bgColor="#e600e6" style={{ height: 100, width: 100 }} />
+        <SocialIcon url="https://twitter.com/rivermoon21" target="_blank" rel="noopener noreferrer" bgColor="#e600e6" style={{ height: 100, width: 100 }} />
       </Modal>
     </div>
 
