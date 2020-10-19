@@ -102,15 +102,19 @@ button {
 .success-msg {
   color: #57A773;
   padding: 10px 15px;
+  background-color: black ;
 }
 
 .err-msg {
   color: #EE6352;
   padding: 10px 15px;
+  background-color: black ;
 }
 .sending-msg {
   color: #FF9900;
   padding: 10px 15px;
+  background-color: black;
+  text-align: center;
 }
 
 .rm-title-div {
@@ -122,9 +126,31 @@ button {
   text-align: left;
 }
 
+.field-form {
+  width: 100%;
+  height: 56px;
+  position: relative;
+  transition: 0.3s all;
+}
+
+.field-form:hover {
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
 .rm-socials {
   text-align: center;
   font-family: 'Kaushan Script', cursive;
   font-family: Andale Mono, monospace;
   font-size: 16px;
+}
+
+#full-name, #email, #subject, #message {
+  background-color: white;
+  border-radius: 15px;
+  color: black;
+}
+#full-name:focus, #email:focus, #subject:focus, #message:focus {
+  border-bottom: 10px solid #58D68D;
+  border-width: medium;
 }

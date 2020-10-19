@@ -12,6 +12,16 @@ const BOTTOM_STYLE = {
   zIndex: 2
 }
 
+const SHEET_STYLES = {
+  background: "rgb(204,17,187)",
+  background: "linear-gradient(45deg, rgba(204,17,187,1) 0%, rgba(219,119,217,1) 50%, rgba(119,0,255,1) 100%)",
+  padding: "30px",
+  borderRadius: "15px",
+  borderWidth: "medium",
+  borderColor: "red",
+  color: "#111"
+}
+
 class ContactPage extends React.Component {
 
   constructor(props){
@@ -20,7 +30,7 @@ class ContactPage extends React.Component {
       name: '',
       email: '',
       subject: '',
-      messsage: '',
+      message: '',
       disabled: '',
       emailSent: '',
       emailSending: ''
@@ -54,9 +64,13 @@ class ContactPage extends React.Component {
           console.log(result.text);
             if(result.text === 'OK'){
               this.setState({
+                name: '',
+                email: '',
+                subject: '',
+                message: '',
                 disabled: false,
                 emailSent: true,
-                emailSending: false
+                emailSending: false,
               });
             }
             else {
@@ -73,9 +87,9 @@ class ContactPage extends React.Component {
             emailSent: false,
             emailSending: false
           });
-        e.target.reset();
       });
   }
+
 
   render() {
     return (
@@ -83,28 +97,28 @@ class ContactPage extends React.Component {
         <Hero title={this.props.title} />
 
         <Content>
-          <Form onSubmit={this.handleSubmit} >
-            <Form.Group>
-              <Form.Label htmlFor="full-name">full name</Form.Label>
+          <Form onSubmit={this.handleSubmit} style={SHEET_STYLES} >
+            <Form.Group >
+              <Form.Label htmlFor="full-name" required={true} >full name</Form.Label>
               <Form.Control id="full-name" name="name" type="text" value={this.state.name} onChange={this.handleChange} />
             </Form.Group>
 
-            <Form.Group>
-              <Form.Label htmlFor="email">email</Form.Label>
+            <Form.Group >
+              <Form.Label htmlFor="email" required={true} >email</Form.Label>
               <Form.Control id="email" name="email" type="email" value={this.state.email} onChange={this.handleChange} />
             </Form.Group>
 
             <Form.Group>
-              <Form.Label htmlFor="subject">subject</Form.Label>
+              <Form.Label htmlFor="subject" required={true} >subject</Form.Label>
               <Form.Control id="subject" name="subject" type="subject" value={this.state.subject} onChange={this.handleChange} />
             </Form.Group>
 
             <Form.Group>
-              <Form.Label htmlFor="message">message</Form.Label>
+              <Form.Label htmlFor="message" required={true} >message</Form.Label>
               <Form.Control id="message" name="message" as="textarea" rows="3" value={this.state.message} onChange={this.handleChange} />
             </Form.Group>
 
-              <Button className="d-inline-block" variant="primary" disabled={this.state.disabled} type="submit" style={{ fontFamily: "Andale Mono, monospace", fontSize: 15, backgroundColor: "#e600e6", border: "#e600e6 solid 3px" }} >
+              <Button className="d-inline-block" variant="primary" disabled={this.state.disabled} type="submit" style={{ fontFamily: "Andale Mono, monospace", fontSize: 15, backgroundColor: "#111", border: "#7700ff solid 3px", borderRadius:"5px" }} >
               Send
             </Button>
 
