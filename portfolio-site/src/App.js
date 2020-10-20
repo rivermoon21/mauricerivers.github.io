@@ -12,6 +12,8 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import SocialsPage from './pages/SocialsPage';
 
+const resumeLink = "https://docs.google.com/document/d/1a9EUGBGO6NI9d4wfe6pTHNPAFeVxq9x2-g5pTyxtAFg/edit?usp=sharing"
+
 class App extends React.Component {
 
   constructor(props) {
@@ -56,7 +58,7 @@ class App extends React.Component {
                 <Link className="nav-link" to="/" style={{ color: "#c1b", borderRadius:"15px" }} >Home</Link>
                 <Link className="nav-link" to="/about"style={{ color: "#c1b", borderRadius:"15px" }} >About</Link>
                 <Link className="nav-link" to="/contact" style={{ color: "#c1b", borderRadius:"15px" }} >Contact</Link>
-                <Link className="nav-link" to="/socials" style={{ color: "#c1b", borderRadius:"15px" }} >Socials</Link>
+                <a className="nav-link" href="https://docs.google.com/document/d/1a9EUGBGO6NI9d4wfe6pTHNPAFeVxq9x2-g5pTyxtAFg/edit?usp=sharing" rel="noopener noreferrer" target="_blank" style={{ color: "#c1b", borderRadius:"15px" }} >Resume</a>
               </Nav>
 
             </Navbar.Collapse>
@@ -65,7 +67,6 @@ class App extends React.Component {
           <Route path="/" exact render={() => <HomePage title={this.state.home.title} subTitle={this.state.home.subTitle} text={this.state.home.text} /> } />
           <Route path="/about" exact render={() => <AboutPage title={this.state.about.title} subTitle={this.state.about.subTitle}  /> } />
           <Route path="/contact" exact render={() => <ContactPage title={this.state.contact.title} subTitle={this.state.contact.subTitle} /> } />
-          <Route path="/socials" exact render={() => <SocialsPage title={this.state.socials.title} /> } />
 
           <Footer  />
 
