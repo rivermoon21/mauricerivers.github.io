@@ -13,16 +13,16 @@ function Footer() {
         <Container fluid={true} >
         <Col className="border-top justify-content-between p-3" >
 
-          <Row className="justify-content-sm-center" style={{ fontFamily: "Kaushan Script, cursive", fontSize: 35, color: "#c1b" }} >
-            <Col sm="auto">
+          <Row className="justify-content-lg-center" style={{ fontFamily: "Kaushan Script, cursive", fontSize: 35, color: "#c1b" }} >
+            <Col lg="auto">
               <SocialIcon url="https://github.com/rivermoon21" target="_blank" rel="noopener noreferrer" bgColor="#e600e6" style={{ height: 50, width: 50 }} />
             </Col>
 
-            <Col sm="auto">
+            <Col lg="auto">
               <SocialIcon url="https://www.linkedin.com/in/mrivera93/" target="_blank" rel="noopener noreferrer" bgColor="#e600e6" style={{ height: 50, width: 50 }} />
             </Col>
 
-            <Col sm="auto">
+            <Col lg="auto">
               <SocialIcon url="https://twitter.com/rivermoon21" target="_blank" rel="noopener noreferrer" bgColor="#e600e6" style={{ height: 50, width: 50 }} />
             </Col>
           </Row>
