@@ -4,7 +4,7 @@ import { SocialIcon } from 'react-social-icons';
 
 import Hero from "../components/Hero";
 import Content from "../components/Content";
-import Modal from "../components/Modal"
+import Modal from "../components/Modal";
 
 const MODAL_STYLES = {
   flex: 1,

@@ -12,8 +12,6 @@ import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import SocialsPage from './pages/SocialsPage';
 
-const resumeLink = "https://docs.google.com/document/d/1a9EUGBGO6NI9d4wfe6pTHNPAFeVxq9x2-g5pTyxtAFg/edit?usp=sharing"
-
 class App extends React.Component {
 
   constructor(props) {
@@ -27,7 +25,7 @@ class App extends React.Component {
       ],
       home: {
         title: "Hello, I\'m Mauricio",
-        subTitle: "Welcome to my page",
+        subTitle: "Welcome,",
         text: "Check out my projects below"
       },
       about: {

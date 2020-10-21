@@ -3,7 +3,7 @@ import Hero from '../components/Hero'
 import Carousel from '../components/Carousel'
 
 const BOTTOM_STYLE = {
-  height: 25,
+  height: 20,
   minHeight: "75vh",
   zIndex: 2,
 }
