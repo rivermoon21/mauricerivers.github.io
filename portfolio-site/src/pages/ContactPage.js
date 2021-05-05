@@ -2,6 +2,11 @@ import React from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import emailjs from 'emailjs-com';
+import {
+  AwesomeButton,
+  AwesomeButtonProgress,
+  AwesomeButtonSocial,
+} from 'react-awesome-button';
 
 import Hero from '../components/Hero';
 import Content from '../components/Content';
@@ -118,9 +123,13 @@ class ContactPage extends React.Component {
               <Form.Control id="message" name="message" as="textarea" rows="3" value={this.state.message} onChange={this.handleChange} />
             </Form.Group>
 
-              <Button className="d-inline-block" variant="primary" disabled={this.state.disabled} type="submit" style={{ fontFamily: "Andale Mono, monospace", fontSize: 15, backgroundColor: "#111", border: "#7700ff solid 3px", borderRadius:"5px" }} >
+            <AwesomeButton 
+              type="primary"
+            className="aws-btn"
+              size="medium"
+            >
               Send
-            </Button>
+            </AwesomeButton >
 
             {this.state.emailSending === true && this.state.emailSent === false && <p className="d-inline sending-msg">Sending...</p>}
             {this.state.emailSending === false && this.state.emailSent === true && <p className="d-inline success-msg">Email Sent</p>}
